@@ -66,7 +66,7 @@ def orderData(data_array):
 # writing reformatted data to json file
 def writeFile(data):
     json_format_data = {"Devices": data}
-    json_string = json.dumps(json_format_data)
+    json_string = json.dumps(json_format_data, indent=3)
     json_file = open("newDevices.json", "w")
     json_file.write(json_string)
     json_file.close()
